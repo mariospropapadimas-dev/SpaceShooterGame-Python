@@ -3,6 +3,8 @@ A fun space shooter game using python
 
 # Space Shooter 🚀
 
+<img width="1311" height="843" alt="Στιγμιότυπο οθόνης 2026-05-25 180441" src="https://github.com/user-attachments/assets/15809e5d-69da-480e-ac54-d2c8efadef54" />
+
 A classic, endless 2D side-scrolling space shooter built with Python and Pygame. Survive as long as you can by dodging enemy ships and meteors, and grab power-ups to keep your ship flying.
 
 ## Features
@@ -16,3 +18,5 @@ A classic, endless 2D side-scrolling space shooter built with Python and Pygame.
 
 ### Prerequisites
 Make sure you have [Python 3.x](https://www.python.org/downloads/) installed on your machine.
+
+
