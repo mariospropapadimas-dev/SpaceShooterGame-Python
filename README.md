@@ -17,6 +17,6 @@ A classic, endless 2D side-scrolling space shooter built with Python and Pygame.
 ## Installation
 
 ### Prerequisites
-Make sure you have [Python 3.x](https://www.python.org/downloads/) installed on your machine.
+Make sure you have [Python 3.x](https://www.python.org/downloads/) and  [Pygame](https://www.pygame.org) installed on your machine.
 
 
