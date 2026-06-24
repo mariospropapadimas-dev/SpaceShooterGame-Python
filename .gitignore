@@ -10,3 +10,4 @@ dist/
 .venv
 env/
 venv/
+.idea/
