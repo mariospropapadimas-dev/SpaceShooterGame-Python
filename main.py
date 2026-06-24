@@ -9,7 +9,6 @@ from heal import CrHeal
 from gamestate import GameState
 from resources import load_image, screen_width, screen_height
 
-# TODO: Add high score tracking using the time library
 
 pygame.init()
 
@@ -106,6 +105,10 @@ while running:
     if collided_with_enemy and not state.shield_active:
         Player.player_lives -= len(collided_with_enemy)
         if Player.player_lives <= 0:
+            final_score = state.get_current_score()
+            if final_score > state.high_score:
+                state.high_score = final_score
+                state.save_high_score(final_score)
             running = False
 
     # powerups
@@ -117,9 +120,15 @@ while running:
     if collided_with_heal and Player.player_lives < 10:
         Player.player_lives = min(10, Player.player_lives + len(collided_with_heal))
 
-    # HUD
+    # HUD( lives, high score, timer)
+    current_score = state.get_current_score()
     lives_surf = font.render(f"Lives: {Player.player_lives}", True, (255, 255, 255))
+    score_surf = font.render(f"Score: {current_score}s", True, (255, 255, 255))
+    high_score_surf = font.render(f"High Score: {state.high_score}s", True, (255, 255, 255))
+
     screen.blit(lives_surf, (10, 10))
+    screen.blit(score_surf, (screen_width // 2 - 80, 10))
+    screen.blit(high_score_surf, (screen_width - 300, 10))
 
     pygame.display.flip()
     clock.tick(60)
